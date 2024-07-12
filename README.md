@@ -43,3 +43,28 @@ ELT with dbt, Snowflake, Airflow
     drop warehouse if exists dbt_wh;
     drop database if exists dbt_db;
     drop role if exists dbt_role;
+
+# dbt init
+
+    dbt init
+    snowflake
+    Which database would you like to use? snowflake
+
+    (Don't see the one you want? https://docs.getdbt.com/docs/available-adapters)
+
+    Enter a number: 1
+    account (https://<this_value>.snowflakecomputing.com): xxxxx.xxxxx
+    user (dev username): [yourlogin]
+    [1] password
+    [2] keypair
+    [3] sso
+    Desired authentication type option (enter a number): 1
+    password (dev password): 
+    role (dev role): dbt_role
+    warehouse (warehouse name): dbt_wh
+    database (default database that dbt will build objects in): dbt_db
+    schema (default schema that dbt will build objects in): dbt_schema
+    threads (1 or more) [1]: 10
+
+    cd data_pipeline
+    dbt debug

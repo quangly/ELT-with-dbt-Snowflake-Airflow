@@ -32,11 +32,28 @@ ELT with dbt, Snowflake, Airflow
     grant role dbt_role to user [snowflake_user];
     grant usage on warehouse dbt_wh to role dbt_role;
     grant all on database dbt_db to role dbt_role;
+    grant all on schema dbt_schema to role dbt_role;
 
     use role dbt_role;
 
     create schema if not exists dbt_db.dbt_schema;
 
+    use dbt_db;
+    use warehouse dbt_wh;
+
+    use role securityadmin;
+
+    grant MANAGE GRANTS on account to role dbt_role;
+
+    use role dbt_role;
+
+    grant select on future tables in schema dbt_db.dbt_schema to role dbt_role; -- this works
+
+    use schema dbt_schema
+
+    select * from STG_TPCH_ORDERS limit 3;
+
+    
     -- clean up
     use role accountadmin;
 
@@ -68,3 +85,23 @@ ELT with dbt, Snowflake, Airflow
 
     cd data_pipeline
     dbt debug
+
+# configure dbt_project.yml
+
+    models:
+    data_pipeline: 
+        # Config indicated by + and applies to all files under models/example/
+        staging:
+        +materialized: view
+        snowflake_wharehouse: dbt_wh
+        marts:
+        +materialized: table
+        snowflake_warehouse: dbt_wh
+
+# install dbt dependencies in packages.yml. get latest dbt-utils
+
+    dbt deps
+
+# dbt run
+
+    dbt run

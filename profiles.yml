@@ -1,0 +1,13 @@
+data_pipeline:
+  outputs:
+    dev:
+      account: lgmpyrf-pta50232
+      database: dbt_db
+      password: 2M6tjpJs4
+      role: dbt_role
+      schema: dbt_schema
+      threads: 10
+      type: snowflake
+      user: quangresume
+      warehouse: dbt_wh
+  target: dev

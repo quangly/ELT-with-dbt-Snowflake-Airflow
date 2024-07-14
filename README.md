@@ -125,6 +125,16 @@ ELT with dbt, Snowflake, Airflow
     astro dev init
     astro dev start
 
+# Astro commands 
+
+    https://www.astronomer.io/docs/astro/cli/run-airflow-locally
+    astro dev stop
+    astro dev logs
+    astro dev kill
+    astro dev restart
+    astro dev run <airflow-cli-command>
+
+
 # Update Dockerfile in Cosmos
 
     RUN python -m venv dbt_venv && source dbt_venv/bin/activate && \

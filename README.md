@@ -108,3 +108,7 @@ ELT with dbt, Snowflake, Airflow
 
 # dbt run specific model only
     dbt run -s stg_tpch_line_items 
+
+# dbt test
+
+    dbt test

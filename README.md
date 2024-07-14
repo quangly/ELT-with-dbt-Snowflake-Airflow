@@ -139,7 +139,15 @@ ELT with dbt, Snowflake, Airflow
     } 
 ```
 
-# Create dbt_dag.py
+# Add to dbt-dag/requirements.txt
+
+```
+astronomer-cosmos
+apache-airflow-providers-snowflake
+```
+
+
+# Create dbt-dag/dags/dbt_dag.py
 
 ```
 import os
@@ -170,7 +178,7 @@ dbt_snowflake_dag = DbtDag(
 )
 ```
 
-# Copy data_pipeline source folder to dbt-dag/dag/s
+# Copy data_pipeline source folder to dbt-dag/dags/
 
 ![alt text](images/dbt-dag-workspace.png)
 ![alt text](images/airflow-dag.png)

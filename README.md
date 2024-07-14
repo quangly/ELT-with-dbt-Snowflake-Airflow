@@ -127,7 +127,7 @@ ELT with dbt, Snowflake, Airflow
         pip install --no-cache-dir dbt-snowflake && deactivate
 
 
-# Airflow config
+# Airflow Snowflake Connections: Admin -> Connections
 
  ```
    {
@@ -172,4 +172,5 @@ dbt_snowflake_dag = DbtDag(
 
 # Copy data_pipeline source folder to dbt-dag/dag/s
 
-    
+![alt text](images/dbt-dag-workspace.png)
+![alt text](images/airflow-dag.png)

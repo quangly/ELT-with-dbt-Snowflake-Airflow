@@ -1,6 +1,10 @@
 # ELT-with-dbt-Snowflake-Airflow
 ELT with dbt, Snowflake, Airflow
 
+![alt text](images/snowflake.png)
+![alt text](images/airflow-dag.png)
+![alt text](images/dbt-dag-workspace.png)
+
 
 # Setup Python Virtual Environment
 
@@ -180,5 +184,3 @@ dbt_snowflake_dag = DbtDag(
 
 # Copy data_pipeline source folder to dbt-dag/dags/
 
-![alt text](images/dbt-dag-workspace.png)
-![alt text](images/airflow-dag.png)

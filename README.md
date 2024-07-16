@@ -1,5 +1,5 @@
 # ELT with dbt, Snowflake, Airflow
-ELT with dbt, Snowflake, Airflow
+This project uses dbt to load sales data into staging views, tables and data marts. Job is scheduled via Airflow (Astro-Cosmos). dbt docs generate create data lineage documentation.
 
 ![alt text](images/dbt-data-lineage.png)
 ![alt text](images/snowflake.png)

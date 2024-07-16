@@ -1,6 +1,7 @@
 # ELT with dbt, Snowflake, Airflow
 ELT with dbt, Snowflake, Airflow
 
+![alt text](images/dbt-data-lineage.png)
 ![alt text](images/snowflake.png)
 ![alt text](images/airflow-dag.png)
 ![alt text](images/dbt-dag-workspace.png)
@@ -128,7 +129,7 @@ ELT with dbt, Snowflake, Airflow
 # dbt docs
 
     dbt docs generate
-    dbt docs serve
+    dbt docs serve --port 3000
 
 # Astro commands 
 

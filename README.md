@@ -125,6 +125,11 @@ ELT with dbt, Snowflake, Airflow
     astro dev init
     astro dev start
 
+# dbt docs
+
+    dbt docs generate
+    dbt docs serve
+
 # Astro commands 
 
     https://www.astronomer.io/docs/astro/cli/run-airflow-locally
